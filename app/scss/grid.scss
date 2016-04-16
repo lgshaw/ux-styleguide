@@ -1,0 +1,44 @@
+$grid-row-height: 9px;
+
+$grid-col: 60px;
+$grid-gutter: 20px;
+$grid-pad: 25px;
+
+.grid-overlay {
+    display:none;
+}
+
+.grid-overlay-container {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    top: 0;
+    margin:0 auto;
+    text-align: center; 
+    opacity: 0.1;
+    display: flex;
+    justify-content: center;
+    align-items: stretch;
+    pointer-events: none;
+    
+    & .grid-overlay-col {
+        display:block;
+        width: ($grid-col);
+        background-color: ($sk-pink);
+        height: 100%;
+    }
+    & .grid-overlay-gutter {
+        display: block;
+        width: ($grid-gutter);
+        background-color: ($sk-pink);
+        opacity: 0.5;
+        flex: 0 0 ($grid-gutter);
+        height:100%;
+    }
+    & .grid-overlay-pad {
+        width: ($grid-pad);
+        background-color: ($sk-pink);
+        opacity: 0.2;
+    }
+}
