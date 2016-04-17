@@ -1,4 +1,4 @@
-    var app = angular.module('styleGuideApp', ['ngRoute']);
+    var app = angular.module('sk.styleguide', ['ngRoute']);
 
 // configure our routes
     app.config(function($routeProvider, $locationProvider) {

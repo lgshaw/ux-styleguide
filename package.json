@@ -1,0 +1,16 @@
+{
+    "name": "sk-styleguide",
+    "version": "1.0",
+    "description": "SEEK UX Styleguide",
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/SEEK-Jobs/sk-styleguide.git"
+    },
+    "author": "Liam Shaw",
+    "devDependencies": {
+        "gulp": "3.9.1",
+        "gulp-concat":"2.6.0",
+        "gulp-sass": "*",
+        
+    }
+}
