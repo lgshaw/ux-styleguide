@@ -17,6 +17,10 @@ app.get('/', function(req, res) {
     // ejs render automatically looks in the views folder
     res.render('index');
 });
+app.all('/*', function(req, res, next) {
+    // Just send the index.html for other files to support HTML5Mode
+    res.sendFile('index.html', { root: __dirname + '/app' });
+});
 
 app.listen(port, function() {
     console.log('Our app is running on http://localhost:' + port);
