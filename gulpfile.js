@@ -12,12 +12,12 @@ gulp.task('sass', function(){
     }))
 });
 
-gulp.task('watch', ['sass', 'browserSync'], function(){
+gulp.task('dev', ['sass', 'browserSync'], function(){
     // Gulp watch syntax
-    gulp.watch('app/scss/**/*.scss', ['sass']); 
+    gulp.watch('app/scss/**/*.scss', ['sass']);
     gulp.watch('app/*.html', browserSync.reload);
-    gulp.watch('app/partials/*.html', browserSync.reload); 
-    gulp.watch('app/js/**/*.js', browserSync.reload); 
+    gulp.watch('app/partials/*.html', browserSync.reload);
+    gulp.watch('app/js/**/*.js', browserSync.reload);
 });
 
 gulp.task('browserSync', function() {
@@ -30,5 +30,5 @@ gulp.task('browserSync', function() {
 
 gulp.task('build', function(){
    return gulp.src('app/css/**/*.css')
-   .pipe(gulp.dest('dist/css')) 
+   .pipe(gulp.dest('dist/css'))
 });

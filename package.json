@@ -1,14 +1,22 @@
 {
-    "name": "sk-styleguide",
+    "name": "ux-styleguide",
     "description": "SEEK UX Styleguide",
+    "main": "server.js",
+    "scripts": {
+      "start": "node server.js"
+    },
     "repository": {
         "type": "git",
-        "url": "https://github.com/SEEK-Jobs/sk-styleguide.git"
+        "url": "https://github.com/lgshawry/ux-styleguide.git"
     },
     "author": "Liam Shaw",
     "devDependencies": {
         "gulp": "3.9.1",
         "gulp-concat":"2.6.0",
         "gulp-sass": "*"
-        }
+      },
+    "dependencies": {
+      "ejs": "~1.0.0",
+      "express": "~4.9.8"
+    }
 }
