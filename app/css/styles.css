@@ -62,42 +62,93 @@ a {
     background-color: #e60278;
     opacity: 0.2; }
 
-nav {
+#menu-toggle {
+  display: none; }
+
+.label-toggle {
+  display: none; }
+
+.navBar {
   background: rgba(0, 0, 0, 0.8);
-  display: flex;
-  width: 100%;
-  justify-content: center;
-  position: fixed;
-  top: 0; }
-  nav ul {
-    display: flex;
-    justify-content: flex-end;
+  min-width: 100%;
+  position: fixed; }
+  .navBar .navWrapper {
+    margin: 0 auto;
+    max-width: 940px;
+    padding: 0 2%;
     align-items: center;
-    flex: 0 1 940px;
-    background-image: url(/images/seek-logo-reverse.svg);
-    background-size: auto 34px;
-    background-repeat: no-repeat;
-    background-position: 0 50%; }
-    nav ul li {
-      text-align: center;
-      display: inline-block;
-      padding: 0 10px; }
-      nav ul li a {
-        display: block;
-        font-size: 1.4rem;
-        color: white;
-        text-decoration: none;
+    display: flex;
+    justify-content: space-between; }
+    .navBar .navWrapper .logo {
+      background-image: url(/images/seek-logo-reverse.svg);
+      background-size: auto 34px;
+      background-repeat: no-repeat;
+      background-position: 0 50%;
+      color: #fff;
+      height: 45px; }
+      .navBar .navWrapper .logo a {
+        text-indent: 100%;
+        overflow: hidden;
         line-height: 45px;
-        height: 45px; }
-      nav ul li.active {
-        box-shadow: inset 0 -4px #fff; }
-      nav ul li.grid-widget {
-        display: block;
-        width: 28px;
-        background: url(/images/seek-grid-widget.svg);
-        background-repeat: no-repeat;
-        background-size: 28px;
-        background-position: 100% 50%; }
+        width: 100%;
+        height: 100%;
+        display: inline-block; }
+    .navBar .navWrapper ul {
+      display: flex;
+      flex: 1 1 auto;
+      justify-content: flex-end; }
+      .navBar .navWrapper ul li {
+        text-align: center;
+        display: inline-block;
+        padding: 0 10px; }
+        .navBar .navWrapper ul li a {
+          display: block;
+          font-size: 1.4rem;
+          color: white;
+          text-decoration: none;
+          line-height: 45px;
+          height: 45px; }
+        .navBar .navWrapper ul li.active {
+          box-shadow: inset 0 -4px #fff; }
+        .navBar .navWrapper ul li.grid-widget {
+          width: 28px;
+          background: url(/images/seek-grid-widget.svg);
+          background-repeat: no-repeat;
+          background-size: 28px;
+          background-position: 100% 50%; }
+
+@media screen and (max-width: 768px) {
+  .navBar {
+    background: #000; }
+    .navBar .navWrapper {
+      flex-wrap: wrap;
+      padding: 0 10px; }
+  .navBar .navWrapper ul {
+    background-color: #000;
+    display: none;
+    list-style-type: none;
+    opacity: 0;
+    text-align: center;
+    transition: all 1s ease;
+    width: 100%; }
+  .navBar .navWrapper ul li {
+    border-bottom: 1px solid #53354A;
+    color: #53354A;
+    display: block;
+    font-size: 1.5em;
+    padding: 0.5em 0; }
+  #menu-toggle:checked ~ ul {
+    opacity: 1;
+    display: block; }
+  .label-toggle {
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    color: #fff;
+    height: 45px;
+    font-size: 14px; }
+  .navBar .navWrapper ul li.grid-widget {
+    display: none; } }
 
 footer {
   background: #222;
@@ -108,6 +159,20 @@ footer {
   padding: 5em 0; }
   footer img {
     width: 150px; }
+
+@media (max-width: 740px) {
+  .flex-row {
+    flex-wrap: wrap; }
+    .flex-row img {
+      display: none; }
+  .bck-light {
+    padding: 0 10px !important;
+    box-sizing: border-box; }
+  .bck-dark {
+    padding: 0 10px !important;
+    box-sizing: border-box; }
+  .content-expanded img {
+    width: 100%; } }
 
 body {
   font-family: Roboto, Helvetica, Arial, sans-serif;
@@ -156,14 +221,13 @@ button {
 .partialHeader {
   background: #e60278;
   text-align: center;
-  width: 100%; }
+  width: 100%;
+  padding-top: 40px; }
   .partialHeader h1 {
     color: white;
     font-size: 42px;
     line-height: 270px;
-    margin: 0;
-    padding-top: 40px;
-  }
+    margin: 0; }
 
 .bck-light {
   background-color: #f7f7f7; }
